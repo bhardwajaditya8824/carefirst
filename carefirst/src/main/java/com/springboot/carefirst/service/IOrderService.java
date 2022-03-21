@@ -23,7 +23,7 @@ public interface IOrderService {
 
 	String getShippedDate(Long orderId);
 
-	Address getOrderClientAddress(Long orderId);
+	com.springboot.carefirst.model.Address getOrderClientAddress(Long orderId);
 
 	Client getOrderClientInfo(Long orderId);
 
