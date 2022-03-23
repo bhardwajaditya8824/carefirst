@@ -7,21 +7,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "payment")
 public class Payment {
-	
+
 	@Column(name = "payment_id")
 	private Long paymentId;
-	
+
 	@Column(name = "product_quantity")
-    private String  quantity;
-	
+	private String quantity;
+
 	@Column(name = "product_price")
-    private int price;
-	
+	private int price;
+
 	@Column(name = "product_id")
-    private int productId;
-	
+	private int productId;
+
 	@Column(name = "client_id")
-    private int clientId;
+	private int clientId;
 
 	public Payment() {
 		super();
@@ -81,7 +81,5 @@ public class Payment {
 		return "Payment [paymentId=" + paymentId + ", quantity=" + quantity + ", price=" + price + ", productId="
 				+ productId + ", clientId=" + clientId + "]";
 	}
-	
-	
 
 }
