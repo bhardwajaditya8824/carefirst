@@ -16,25 +16,30 @@ public class Discount {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long discountId;
 
-	@Column(name = "price")
-	private String price;
 
 	@Column(name = "valid_date")
 	private String validDate;
 
 	@Column(name = "is_used") // whether the discount have been utilized prior
 	private String isUsed;
+	
+	@Column(name = "code")
+	private String code;
+	
+	@Column(name = "binary")
+	private int binary;
 
 	public Discount() {
 		super();
 	}
 
-	public Discount(Long discountId, String price, String validDate, String isUsed) {
+	public Discount(Long discountId, String validDate, String isUsed, String code, int binary) {
 		super();
 		this.discountId = discountId;
-		this.price = price;
 		this.validDate = validDate;
 		this.isUsed = isUsed;
+		this.code = code;
+		this.binary = binary;
 	}
 
 	public Long getDiscountId() {
@@ -43,14 +48,6 @@ public class Discount {
 
 	public void setDiscountId(Long discountId) {
 		this.discountId = discountId;
-	}
-
-	public String getPrice() {
-		return price;
-	}
-
-	public void setPrice(String price) {
-		this.price = price;
 	}
 
 	public String getValidDate() {
@@ -69,10 +66,27 @@ public class Discount {
 		this.isUsed = isUsed;
 	}
 
-	@Override
-	public String toString() {
-		return "Discount [discountId=" + discountId + ", price=" + price + ", validDate=" + validDate + ", isUsed="
-				+ isUsed + "]";
+	public String getCode() {
+		return code;
 	}
 
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public int getBinary() {
+		return binary;
+	}
+
+	public void setBinary(int binary) {
+		this.binary = binary;
+	}
+
+	@Override
+	public String toString() {
+		return "Discount [discountId=" + discountId + ", validDate=" + validDate + ", isUsed=" + isUsed + ", code="
+				+ code + ", binary=" + binary + "]";
+	}
+
+	
 }
