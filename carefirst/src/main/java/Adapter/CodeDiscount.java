@@ -5,6 +5,7 @@ import com.springboot.carefirst.model.CodeQRAmount;
 import com.springboot.carefirst.model.Order;
 import com.springboot.carefirst.repository.ClientRepository;
 
+//Adaptee
 public class CodeDiscount {
 
 	private ClientRepository clientRepository;
@@ -27,7 +28,7 @@ public class CodeDiscount {
 	public double codeToAmount(String code) {
 		return new CodeQRAmount().amountAssociated(code);
 	}
-
+//Specific Request
 	public void redeemAmount(double amount) {
 		Double Balance = order.getCartPrice() - amount;
 		order.setCartPrice(Balance);

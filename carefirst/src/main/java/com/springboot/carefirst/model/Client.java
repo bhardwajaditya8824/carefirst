@@ -6,10 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import Memento.ClientMemento;
+
 //javax = loose coupling 
 @Entity //this class is a table
 @Table(name = "cli") //access : wecare.cli
-
+//Originator
 public class Client {
 
 	@Id //next thing will be a primary key
@@ -130,6 +132,23 @@ public class Client {
 	public void setClientId(Long clientId) {
 		this.clientId = clientId;
 	}
+	
+	 public ClientMemento saveToMemento() {
+		 ClientMemento clientMemento=new ClientMemento(this.clientId,this.clientFName,this.clientSName,this.clientEmail,this.clientDob,this.clientAddressId ,this.clientAbt,this.clientNumber,this.clientLoginId );
+	        return clientMemento;
+	    }
+	    public  void undoFromMemento(ClientMemento memento)
+	    {
+	    	this.clientId = memento.getClientId();
+			this.clientFName = memento.getClientFName();
+			this.clientSName = memento.getClientSName();
+			this.clientEmail = memento.getClientEmail();
+			this.clientDob = memento.getClientDob();
+			this.clientAddressId = memento.getClientAddressId();
+			this.clientAbt = memento.getClientAbt();
+			this.clientNumber = memento.getClientNumber();
+			this.clientLoginId = memento.getClientLoginId();
+	    }
 
 	@Override
 	public String toString() {

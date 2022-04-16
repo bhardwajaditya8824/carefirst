@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.springboot.carefirst.model.Payment;
 
 @Repository
-public interface PaymentRepository extends JpaRepository<Payment, Long> {
+public interface PaymentRepository{
 
 }
