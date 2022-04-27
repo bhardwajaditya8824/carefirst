@@ -8,10 +8,10 @@ public class PaymentFactory extends BasePaymentFactory {
 		OnlinePayment payment;
 		switch (mode.toLowerCase()) {
 		case "paypal":
-			payment = new PaymentByCard();
+			payment = new PaymentByPaypal();
 			break;
 		case "card":
-			payment = new PaymentByPaypal();
+			payment = new PaymentByCard();
 			break;
 
 		default:

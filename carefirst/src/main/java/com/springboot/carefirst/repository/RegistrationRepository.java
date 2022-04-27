@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.springboot.carefirst.model.Registration;
 
 @Repository
-public interface RegistrationRepository extends JpaRepository<Registration, Long> {
+public interface RegistrationRepository {
 
 }

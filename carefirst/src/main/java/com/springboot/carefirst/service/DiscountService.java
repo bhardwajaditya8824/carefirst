@@ -29,7 +29,7 @@ public class DiscountService implements IDiscountService {
 		}
 		dis = discount.get();
 
-		return dis.getPrice();
+		return "deleted";
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class DiscountService implements IDiscountService {
 
 				Discount updateDiscount = searchRecord.get();
 				updateDiscount.setIsUsed(discount.getIsUsed());
-				updateDiscount.setPrice(discount.getPrice());
+				// updateDiscount.setPrice(discount.getPrice());
 				updateDiscount.setValidDate(discount.getValidDate());
 
 				discountRepository.save(updateDiscount);
@@ -77,7 +77,7 @@ public class DiscountService implements IDiscountService {
 			return e.getMessage();
 		}
 
-		return discount.getPrice();
+		return "";
 	}
 
 	@Override

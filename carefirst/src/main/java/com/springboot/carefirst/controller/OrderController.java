@@ -77,19 +77,7 @@ public class OrderController {
 		return orderService.getOrderClientInfo(orderId);
 	}
 
-//	@CrossOrigin
-//	@PutMapping("/addToCart")
-//	public String updateOrder(@RequestBody @Valid Order order) {
-//		String response = orderService.updateOrder(order);
-//		return response;
-//	}
-//	
-//	@CrossOrigin
-//	@PutMapping("/removeFromCart")
-//	public String updateOrder(@RequestBody @Valid Order order) {
-//		String response = orderService.updateOrder(order);
-//		return response;
-//	}
+
 
 // getOrderDate   getShippedDate    getOrderClientAddress  getClient   addToCart removeFromCart 
 }

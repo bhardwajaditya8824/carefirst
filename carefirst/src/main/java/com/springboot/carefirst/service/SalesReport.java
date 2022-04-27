@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.springboot.carefirst.model.Order;
 
+
+//Real Subject
 public class SalesReport implements ISalesReport {
 	
 	
@@ -24,11 +26,13 @@ public class SalesReport implements ISalesReport {
 	}
 
 	@Override
-	public int generateSalesCost(String reportFormat, int reportEntries) {
+	public void generateSalesCost(String reportFormat, int reportEntries) {
 		System.out.println("sales cost generated");
 		
-		return 0;
+		
 		
 	}
+
+	
 
 }

@@ -4,10 +4,13 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.stereotype.Service;
+
 import com.springboot.carefirst.model.Address;
 import com.springboot.carefirst.model.Client;
 import com.springboot.carefirst.model.Order;
 
+@Service
 public class OrderService implements IOrderService{
 
 	@Override
